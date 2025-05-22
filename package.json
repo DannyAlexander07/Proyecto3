@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "build:ts": "tsc",
+    "build:css": "postcss src/main.css -o public/dist/main.css",
+    "build": "npm run build:ts && npm run build:css",
+    "dev": "npm run build && node public/dist/app.js"
+  },
+  "dependencies": {
+    "@types/express-session": "^1.18.1",
+    "@types/mysql": "^2.15.27",
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.x",
+    "express": "^4.x",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^6.x"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.1",
+    "autoprefixer": "^10.x",
+    "postcss-cli": "^9.x",
+    "typescript": "^4.x"
+  }
+}

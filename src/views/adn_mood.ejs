@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <meta name="description" content="<%= meta_description %>">
+  <!-- Open Graph (Facebook, LinkedIn, Pinterest, WhatsApp, …) -->
+  <meta property="og:title"         content="<%= title %>" />
+  <meta property="og:description"   content="<%= meta_description %>" />
+  <meta property="og:url"           content="<%= pageUrl %>" />
+  <meta property="og:type"          content="<%= pageType %>" />
+  <meta property="og:image"         content="<%= pageImage %>" />
+  <meta property="og:image:width"   content="<%= imageWidth %>" />
+  <meta property="og:image:height"  content="<%= imageHeight %>" />
+  <meta property="og:site_name"     content="<%= title_heading %>" />
+  <meta property="og:locale"        content="<%= locale %>" />
+  <!-- Facebook Insights / Insights admins -->
+  <!-- <meta property="fb:app_id"        content="<%= //fbAppId %>" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"         content="summary_large_image" />
+  <!-- <meta name="twitter:site"         content="@<%= //twitterHandle %>" /> -->
+  <!-- <meta name="twitter:creator"      content="@<%= //twitterCreator || twitterHandle %>" /> -->
+  <meta name="twitter:title"        content="<%= title %>" />
+  <meta name="twitter:description"  content="<%= meta_description %>" />
+  <meta name="twitter:image"        content="<%= pageImage %>" />
+
+  <!-- Opcional: para compatibilidad con algunos navegadores/redes -->
+  <link rel="image_src"             href="<%= pageImage %>" />
+  <link rel="canonical"             href="<%= pageUrl %>" />
+
+  <%- include('partials/header') %>
+
+  <h1 hidden><%= title_heading %></h1>
+  <section id="hero_adn">
+    <!-- Overlay oscuro -->
+    <div class="hero-overlay"></div>
+
+    <!-- Contenedor flex para centrar -->
+    <div class="hero-container">
+      <div class="hero-slider">
+        <div class="slide active">
+          <div class="slide-content">
+            <h2>LIVE <span>HAPPY</span></h2>
+            <p>El balance entre la vida personal y laboral es una búsqueda constante y nos permite dar lo mejor de nosotros en el trabajo.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2>MAKE IT <span>HAPPEN</span></h2>
+            <p>Nuestra capacidad para ejecutar los planes que tenemos en mente es determinada y ágil.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2>STAY <span>HUNGRY</span></h2>
+            <p>Siempre buscamos más, somos ANTI conformistas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="history">
+    <!-- Se agrega un overlay oscuro opcional -->
+    <div class="history-overlay"></div>
+    <div class="history-container">
+      <div class="history-content">
+        <h2>HISTORIA</h2>
+        <p>
+          Somos una red de espacios creativos presentes en LATAM con una década de éxito en gestión de proyectos de comunicación y transformación digital, cambiando cada una de nuestras marcas con ideas disruptivas en un mundo más hiperconectado y complejo.
+        </p>
+        <p class="tags">
+          #ecommerce  #digitalTransformation  #brandStrategy  #partnership  #socialStrategy  #contenido  #desarrolloweb
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="timeline-horizontal" class="interactive-timeline">
+    <button id="prev-year" class="timeline-btn prev" aria-label="Anterior"><i class="bi bi-chevron-compact-left"></i></button>
+    
+    <div class="timeline-wrapper">
+      <div class="timeline-track">
+        <div class="timeline-item current">
+          <div class="timeline-icon">2013</div>
+          <div class="timeline-content">
+            <!-- <h4>Inicio de la aventura</h4> -->
+            <p>Matthias Stimman y Vasco Romero, socios fundadores, crean Mood como agencia digital con el propósito de ofrecer una propuesta diferenciada y competitiva.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon ">2014</div>
+          <div class="timeline-content">
+            <!-- <h4>Primera plataforma</h4> -->
+            <p>Mood pasa de ser una agencia de 6 personas a consolidar un equipo de casi 30 personas respaldado en la confianza y los resultados de sus primeros clientes.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2015</div>
+          <div class="timeline-content">
+            <!-- <h4>Crecimiento regional</h4> -->
+            <p> Mood inicia el proceso de integración de servicios al incorporar talentos especializados en diversas aristas comunicacionales (ATL / BTL / Digital) y se posiciona como una agencia de comunicación integral.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2017</div>
+          <div class="timeline-content">
+            <!-- <h4>Nuevo producto</h4> -->
+            <p>Se crea el holding Grupo SP en el cual Mood forma parte de un ecosistema de marketing y comunicaciones totalmente integral, conformado por diferentes unidades de negocio como productora BTL, agencia de relaciones públicas, contact center, estudio de mercado y data research, software factory, entre otros.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2019</div>
+          <div class="timeline-content">
+            <!-- <h4>Expansión global</h4> -->
+            <p>Se inicia el proceso de internacionalización de Mood con las aperturas de las oficinas en Bogotá y Ciudad de Panamá.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2020</div>
+          <div class="timeline-content">
+            <!-- <h4>Expansión global</h4> -->
+            <p>Mood es anunciada nuevamente como Agencia Independiente del Año 2020 por TOP Iberoamericano FICE.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2022</div>
+          <div class="timeline-content">
+            <!-- <h4>Expansión global</h4> -->
+            <p>Mood formaliza una estructura de trabajo regional con la incorporación de Daniel Esguerra como director ejecutivo regional y con puestos directivos claves en los diferentes países
+              en los que opera.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <button id="next-year" class="timeline-btn next" aria-label="Siguiente"><i class="bi bi-chevron-compact-right"></i></button>
+  </section>
+  
+
+  <section id="culture">
+    <!-- Overlay oscuro -->
+    <div class="culture-overlay"></div>
+    <!-- Título y descripción superpuestos -->
+    <div class="culture-header">
+      <h2>Nuestra Cultura</h2>
+    </div>
+  
+    <!-- Carrusel -->
+    <div class="culture-wrapper">
+      <div class="culture-track">
+        <!-- Repite este bloque por cada imagen -->
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-1.webp" alt="Cultura 1">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-2.webp" alt="Cultura 2">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-3.webp" alt="Cultura 3">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-4.webp" alt="Cultura 4">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-5.webp" alt="Cultura 5">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-6.webp" alt="Cultura 6">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-7.webp" alt="Cultura 6">
+        </div>
+        <div class="culture-slide">
+          <img src="/images/Foto-Cultura-Mood-1-8.webp" alt="Cultura 6">
+        </div>
+        <!-- Si quieres un bucle suave, volvemos a clonar estas 6 imágenes al final -->
+      </div>
+    </div>
+    <div class="culture-footer">
+      <p><b>La cultura Mood es una cultura fresca y optimista, llena de energía.</b></p><br>
+      <p>Al conocer a un “Mooder” encontrarás a un profesional con talento, interesado en darte una propuesta innovadora y acertada a tus necesidades. Para nosotros, no sólo se trata de creatividad, sino de ser disruptivos. Verás un equipo en constante movimiento y comunicación, discutiendo ideas, compartiendo, buscando consejo y pidiendo ayuda para realizar un entregable completo. </p>
+
+      <p>Encontrarás un equipo que toma los cambios positivamente y trabaja arduamente para transformar retos en oportunidades. Finalmente, el equipo de liderazgo, conoce las fortalezas de cada miembro del equipo, brindándoles dirección en cada reto y construyendo vías para el desarrollo del mismo.</p>
+    </div>
+  </section>
+  
+  <!-- Sección de Regionalidad -->
+  <section id="regionalidad">
+    <!-- Sub-sección con la animación de países -->
+    <div class="regionalidad-textos">
+      <div class="text-content">
+        <h2>REGIONALIDAD</h2>
+        <p>Explora la presencia de Mood en diferentes países</p>
+      </div>
+      <div class="country-rotation text-center">
+        <div class="country-names">
+          <span class="hashtag">#</span>
+          <span id="countries"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-sección con la galería de imágenes -->
+    <div class="regionalidad-gallery">
+      <div class="gallery-image">
+        <img src="/images/Banner-ADN-MOOD1.webp" alt="Imagen 1" class="zoom-image">
+      </div>
+      <div class="gallery-image">
+        <img src="/images/Banner-ADN-MOOD2.webp" alt="Imagen 2" class="zoom-image">
+      </div>
+      <div class="gallery-image">
+        <img src="/images/Banner-ADN-MOOD3.webp" alt="Imagen 3" class="zoom-image">
+      </div>
+      <div class="gallery-image">
+        <img src="/images/Banner-ADN-MOOD4.webp" alt="Imagen 4" class="zoom-image">
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="osmo-carousel m-auto overflow-hidden position-relative">
+          <div class="osmo-logo-track d-flex">
+              <div class="logo">
+                <img src="/images/marcas/Burger_king.webp" alt="Logo BK" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/bahia.webp" alt="Logo Bahia" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/autostar.webp" alt="Logo Autostar" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Amarillo.webp" alt="Logo Amarillo" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/virutex.webp" alt="Logo Virutex" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Santa_Ana.webp" alt="Logo Santa Ana" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/sabor_de_oro.webp" alt="Logo Sabor de oro" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Ron_viejo_de_Caldas.webp" alt="Logo Ron Viejo de Caldas" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/ron_catarvio.webp" alt="Logo Ron Cartavio" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Ram.webp" alt="Logo RAM" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/pinkberry.webp" alt="Logo Pinkberry" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Mercedez_benz.webp" alt="Logo Mercedez Benz" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Maxus.webp" alt="Logo Maxus" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Marcan.webp" alt="Logo Marcan" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Madam_tusan.webp" alt="Logo Madam Tusan" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/KR.webp" alt="Logo KR" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/jose_cuervo.webp" alt="Logo Jose Cuervo" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Jeep.webp" alt="Logo Jeep" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/ishop.webp" alt="Logo iShop" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Havoline.webp" alt="Logo Havoline" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/generate.webp" alt="Logo Generate" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Fiat.webp" alt="Logo Fiat" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Ferreyros.webp" alt="Logo Ferreyros" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Crocs.webp" alt="Logo Crocs" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Corporacion_grupo_romero.webp" alt="Logo Corporación Grupo Romero" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/comapan.webp" alt="Logo Comapan" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Chevron.webp" alt="Logo Chevron" class="zoom-image">
+              </div>
+              <div class="logo">
+                <img src="/images/marcas/Chilis.webp" alt="Logo Chillis" class="zoom-image">
+              </div>
+          </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="perspectivas">
+    <div class="perspectivas-container">
+      <div class="perspectivas-content">
+        <h2>5 PERSPECTIVAS</h2>
+        <p>
+          La perspectiva es muy importante para que su marca comience a diferenciarse de las demás. Por eso de ahora en adelante cada proyecto, cada estrategia o idea tendrá el asesoramiento de 5 Directores Regionales
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="personas">
+    <div class="carousel">
+      <div class="carousel-content text-center">
+        <div class="card card-photo">
+          <img src="/images/personas/Daniel.webp" alt="Daniel" title="">
+          <h2>DANIEL ESGUERRA</h2>
+          <h4>Director Ejecutivo Regional</h4>
+          <p>Estrategia e innovación para alinear los procesos y garantizar el éxito de cada una de nuestras marcas.</p>
+        </div>
+        <div class="card card-photo">
+          <img src="/images/personas/Julian.webp" alt="Julian" title="">
+          <h2>JULIÁN MARTÍNEZ</h2>
+          <h4>Director de medios regional</h4>
+          <p>Su marca tiene la potencia para llegar muy lejos. Nosotros haremos todo para que tenga más visibilidad.</p>
+        </div>
+        <div class="card card-photo">
+          <img src="/images/personas/Latto.webp" alt="Latto" title="">
+          <h2>LATO LATORRE</h2>
+          <h4>Director creativo regional</h4>
+          <p>La creatividad, el mundo de las ideas y la imaginación nos ayudará a crecer como personas y como comunidad, por eso trabajaremos día a día por mejorar.</p>
+        </div>
+        <div class="card card-photo">
+          <img src="/images/personas/Lorena.webp" alt="Lorena" title="">
+          <h2>LORENA THACHE</h2>
+          <h4>Directora de arte Regional</h4>
+          <p>Apasionada por el diseño el arte y las composiciones gráficas. Creadora de historias gráficas que le ayudan a las personas a expresarse, encontrarse y muchas veces llegar a la felicidad.</p>
+        </div>
+        <div class="card card-photo">
+          <img src="/images/personas/Tatiana.webp" alt="Tatiana" title="">
+          <h2>TATIANA URBANO</h2>
+          <h4>Directora General de Cuentas</h4>
+          <p>No ha existido indicador de éxito más poderoso que lograr una buena estrategia para las marcas y detonar ese nexo que pueden tener las ideas con las personas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="logos">
+    <div class="row d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <div class="col-6 col-md-2 text-center">
+        <img class="img-fluid" src="/images/logos/mood.svg" alt="Logo Mood">
+      </div>
+      <div class="col-6 col-md-2 text-center">
+        <img class="img-fluid" src="/images/logos/grupo-sp.svg" alt="logo GrupoSP">
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+</body>
+</html>

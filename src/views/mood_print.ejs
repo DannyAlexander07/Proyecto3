@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <meta name="description" content="<%= meta_description %>">
+  <!-- Open Graph (Facebook, LinkedIn, Pinterest, WhatsApp, …) -->
+  <meta property="og:title"         content="<%= title %>" />
+  <meta property="og:description"   content="<%= meta_description %>" />
+  <meta property="og:url"           content="<%= pageUrl %>" />
+  <meta property="og:type"          content="<%= pageType %>" />
+  <meta property="og:image"         content="<%= pageImage %>" />
+  <meta property="og:image:width"   content="<%= imageWidth %>" />
+  <meta property="og:image:height"  content="<%= imageHeight %>" />
+  <meta property="og:site_name"     content="<%= title_heading %>" />
+  <meta property="og:locale"        content="<%= locale %>" />
+  <!-- Facebook Insights / Insights admins -->
+  <!-- <meta property="fb:app_id"        content="<%= //fbAppId %>" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"         content="summary_large_image" />
+  <!-- <meta name="twitter:site"         content="@<%= //twitterHandle %>" /> -->
+  <!-- <meta name="twitter:creator"      content="@<%= //twitterCreator || twitterHandle %>" /> -->
+  <meta name="twitter:title"        content="<%= title %>" />
+  <meta name="twitter:description"  content="<%= meta_description %>" />
+  <meta name="twitter:image"        content="<%= pageImage %>" />
+
+  <!-- Opcional: para compatibilidad con algunos navegadores/redes -->
+  <link rel="image_src"             href="<%= pageImage %>" />
+  <link rel="canonical"             href="<%= pageUrl %>" />
+
+  <%- include('partials/header') %>
+
+  <h1 hidden><%= title_heading %></h1>
+  <section id="hero_print">
+    <!-- Overlay oscuro -->
+    <div class="hero-overlay"></div>
+
+    <!-- Contenedor flex para centrar -->
+    <div class="hero-container">
+      <div class="hero-slider">
+        <div class="slide active">
+          <div class="slide-content">
+            <h2><span>1</span></h2>
+            <h3>AGENCIA</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2><span>2</span></h2>
+            <h3>CREATIVIDAD</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2><span>3</span></h2>
+            <h3>DIGITAL</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-footer">
+        <p><b>Dicen que el número 3 es el número de la suerte, nosotros creemos que es el del éxito,</b> por eso decidimos romper esquemas y convertir una agencia creativa normal, en una agencia creativa que potencia cada idea y cada proyecto en el entorno digital para que su marca logre mayores alcances.</p>
+      </div>
+    </div>    
+  </section>
+
+  <section id="servicios">
+    <!-- Se agrega un overlay oscuro opcional -->
+    <div class="servicios-overlay"></div>
+    <div class="servicios-container">
+      <div class="servicios-content">
+        <h2>SERVICIOS</h2>
+        <p class="tags">
+          <span class="tab-btn" id="btn1">#SocialMediaMarketing</span>
+          #ecommerce
+          #digitalTrasformation
+          <span class="tab-btn" id="btn2">#CodeFactory</span>
+          #brandStrategy
+          #contentCreation
+          <span class="tab-btn" id="btn3">#PerformanceMarketing</span>
+          #ContactCenter
+          #webDevelopment
+          #BTL
+          #ATL
+          #PR
+          #InfluencerMarketing
+          <span class="tab-btn" id="btn4">#DataAnalysis</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tipo_servicio">
+    <div id="content1" class="content-panel">
+      <div class="tipo_servicio-container">
+        <div class="tipo_servicio-content">
+          <h2>#SocialMediaMarketing</h2>
+          <p>Cada red social cumple un rol fundamental en la vida de las personas. Nosotros lograremos un equilibrio perfecto entre información y diversión con cada estrategia que hacemos para su marca.
+          </p>
+          <img class="img-fluid mt-4" src="/images/Tipo_servicios-1.webp" alt="Servicio SocialMediaMarketing">
+        </div>
+      </div>
+    </div>
+    <div id="content2" class="content-panel">
+      <div class="tipo_servicio-container">
+        <div class="tipo_servicio-content">
+          <h2>#CodeFactory</h2>
+          <p>Posicionamos sus productos en la red a través de páginas web especializadas, landing pages, un e-commerce, una App o la creación de un software diferente.
+          </p>
+          <button class='btn_dev'><a href="#">Ver nuestros <b>desarrollos web</b></a></button>
+          <img class="row mt-4" src="/images/Tipo_servicios-head_.svg" alt="Servicio CodeFactory">
+        </div>
+      </div>
+    </div>
+    <div id="content3" class="content-panel">
+      <div class="tipo_servicio-container">
+        <div class="tipo_servicio-content">
+          <h2>#PerformanceMarketing</h2>
+          <p>En Mood nos enfocamos en medir y mejorar el rendimiento de las campañas publicitarias y promocionales. En lugar de simplemente generar exposición de marca o tráfico web, el objetivo del Performance Marketing es lograr un retorno de inversión (ROI) positivo y medible.
+          </p>
+          <img class="img-fluid mt-4" src="/images/Tipo_servicios-3.webp" alt="Servicio PerformanceMarketing">
+        </div>
+      </div>
+    </div>
+    <div id="content4" class="content-panel">
+      <div class="tipo_servicio-container">
+        <div class="tipo_servicio-content">
+          <h2>#DataAnalysis</h2>
+          <!-- <p>
+Cada red social cumple un rol fundamental en la vida de las personas. Nosotros lograremos un equilibrio perfecto entre información y diversión con cada estrategia que hacemos para su marca.ss
+          </p> -->
+          <img class="img-fluid mt-4" src="/images/Tipo_servicios-4.webp" alt="Servicio DataAnalysis">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="logos">
+    <div class="row d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <div class="col-6 col-md-2 text-center">
+        <img class="img-fluid" src="/images/logos/mood.svg" alt="Logo Mood">
+      </div>
+      <div class="col-6 col-md-2 text-center">
+        <img class="img-fluid" src="/images/logos/grupo-sp.svg" alt="Logo GrupoSP">
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

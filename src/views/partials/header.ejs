@@ -1,0 +1,77 @@
+
+<link rel="icon" href="images/Logo_Mood.svg" sizes="32x32">
+<link rel="icon" href="images/Logo_Mood.svg" sizes="192x192">
+<link rel="apple-touch-icon" href="images/Logo_Mood.svg">
+<meta name="msapplication-TileImage" content="images/Logo_Mood.svg">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="dist/main.css" >
+<link rel="stylesheet" href="fonts/main.css">
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="page-loader">
+    <div class="loader-dots">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+  </div>
+
+  <!-- Overlay 4 rectángulos verticales -->
+  <div id="page-overlay">
+    <div class="overlay-part part1"></div>
+    <div class="overlay-part part2"></div>
+    <div class="overlay-part part3"></div>
+    <div class="overlay-part part4"></div>
+  </div>
+
+  <!-- Cursor personalizado -->
+  <div id="custom-cursor"></div>
+
+  <!-- Esferas animadas -->
+  <div id="universe"></div>
+
+  <!-- Botones sociales flotantes -->
+  <div id="social-float">
+    <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+  </div>
+
+  <!-- Navbar -->
+  <header id="main-header" class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-light">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="/">
+        <img id="logo" src="images/Logo_Mood.svg" alt="Mood Logo" height="60">
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav id="navbarNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item <%= page === '/' ? 'active' : '' %>">
+            <a class="nav-link px-3" href="/" rel="noopener noreferrer follow">Home</a>
+          </li>
+          <li class="nav-item <%= page === 'adn_mood' ? 'active' : '' %>">
+            <a class="nav-link px-3" href="/adn_mood" rel="noopener noreferrer follow">ADN Mood</a>
+          </li>
+          <li class="nav-item <%= page === 'mood_print' ? 'active' : '' %>">
+            <a class="nav-link px-3" href="/mood_print" rel="noopener noreferrer follow">Mood Print</a>
+          </li>
+          <li class="nav-item <%= page === 'whatsyourmood' ? 'active' : '' %>">
+            <a class="nav-link px-3" href="/whatsyourmood" rel="noopener noreferrer follow">#WhatsYourMood</a>
+          </li>
+          <li class="nav-item <%= page === 'contact' ? 'active' : '' %>">
+            <a class="nav-link px-3" href="/contact" rel="noopener noreferrer follow">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <meta name="description" content="<%= meta_description %>">
+  <!-- Open Graph (Facebook, LinkedIn, Pinterest, WhatsApp, …) -->
+  <meta property="og:title"         content="<%= title %>" />
+  <meta property="og:description"   content="<%= meta_description %>" />
+  <meta property="og:url"           content="<%= pageUrl %>" />
+  <meta property="og:type"          content="<%= pageType %>" />
+  <meta property="og:image"         content="<%= pageImage %>" />
+  <meta property="og:image:width"   content="<%= imageWidth %>" />
+  <meta property="og:image:height"  content="<%= imageHeight %>" />
+  <meta property="og:site_name"     content="<%= title_heading %>" />
+  <meta property="og:locale"        content="<%= locale %>" />
+  <!-- Facebook Insights / Insights admins -->
+  <!-- <meta property="fb:app_id"        content="<%= //fbAppId %>" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"         content="summary_large_image" />
+  <!-- <meta name="twitter:site"         content="@<%= //twitterHandle %>" /> -->
+  <!-- <meta name="twitter:creator"      content="@<%= //twitterCreator || twitterHandle %>" /> -->
+  <meta name="twitter:title"        content="<%= title %>" />
+  <meta name="twitter:description"  content="<%= meta_description %>" />
+  <meta name="twitter:image"        content="<%= pageImage %>" />
+
+  <!-- Opcional: para compatibilidad con algunos navegadores/redes -->
+  <link rel="image_src"             href="<%= pageImage %>" />
+  <link rel="canonical"             href="<%= pageUrl %>" />
+  
+  <%- include('partials/header') %>
+
+  <h1 hidden><%= title_heading %></h1>
+  <section id="blog">
+    <!-- Se agrega un overlay oscuro opcional -->
+    <div class="blog-overlay"></div>
+    <div class="blog-container">
+      <div class="blog-content">
+        <h2>BLOG</h2>
+        <p>
+          Marketing, Digital Planning, Inteligencia Artificial, entre otros, son los temas que encontrarás en nuestro blog.
+        </p>
+        <p>¡Nos vemos allí!</p>
+      </div>
+    </div>
+  </section>
+
+<section id="blog_entradas">
+  <div class="blog__entries">
+    <article class="blog__entry">
+      <time datetime="2023-05-29">29 Mayo 2023</time>
+      <h2>¿KPI’s u objetivos?</h2>
+      <p>Definir el norte de comunicación, negocio y medición es clave, ¿pero sabemos su diferencia?</p>
+      <button class="ver-mas-btn">Ver más</button>
+    </article>
+
+    <article class="blog__entry">
+      <time datetime="2023-05-29">29 Mayo 2023</time>
+      <h2>Las 3 A’s de la regionalización</h2>
+      <p>Asertividad, agilidad, adaptación.</p>
+      <button class="ver-mas-btn">Ver más</button>
+    </article>
+
+    <article class="blog__entry">
+      <time datetime="2023-04-29">29 Abril 2023</time>
+      <h2>El “nuevo” medio digital</h2>
+      <p>Lejos de ser posts de celebrities aislados, hoy son tomadores de decisiones en las marcas.</p>
+      <button class="ver-mas-btn">Ver más</button>
+    </article>
+
+    <article class="blog__entry">
+      <time datetime="2023-04-29">29 Abril 2023</time>
+      <h2>Los algoritmos en lo orgánico</h2>
+      <p>Para muchos creadores de contenido digital producir contenido orgánico no es equitativo al tiempo de elaboración.</p>
+      <button class="ver-mas-btn">Ver más</button>
+    </article>
+  </div>
+</section>
+
+<div id="overlay" class="overlay"></div>
+
+<!-- Dialogs -->
+<dialog id="dialog1">
+  <button class="dialog-close-btn" data-dialog-id="dialog1">X</button>
+  <h2>¿KPI’s u objetivos?</h2>
+  <p>No todas las marcas llegan golpeando la misma puerta, en nuestra primera entrada del mes, hablaremos de la diferencia entre reconocer el norte en una comunicación, el objetivo digital y el KPI.</p>
+
+  <p>Pensemos en lo siguiente, nuestra marca perdió toda comunicación con el público y cerró sus puertas en pandemia, ¿seguros que solo necesita seguidores, hacer muchos posts e invertir algo de dinero sin algo más estratégico? ¡ERROR!</p>
+    
+  <p>El norte de comunicación es retomar el contacto afín a su comunidad, dando contenido de valor, compartiendo información de la industria a la que pertenece, es decir, cumpliendo un rol de acompañamiento en las fases de compra; ahora si hablamos del objetivo de negocio, estará netamente enfocado a obtención de leads para recuperar la venta perdida. El KPI es el más fuerte de todo este proceso, ya que se aterriza todo lo anterior en términos digitales, es decir, awareness, compromiso e influencia. 
+    <p>¿Qué más nos pueden compartir sobre este tema Mooders?</p>
+  <p class="text-footer-dialog">MAKE THINGS HAPPEN, NO MATTER WHAT</p>
+</dialog>
+
+<dialog id="dialog2">
+  <button class="dialog-close-btn" data-dialog-id="dialog2">X</button>
+  <h2>Las 3 A’s de la regionalización</h2>
+  <p>La comunicación estratégica local da una serie de ventajas, clientes y colaboradores viven en el mismo país, se entiende el mismo contexto y hasta los encuentros requieren de menos logística, pero nosotros teníamos un sueño aún más grande, que nuestra Moodlogy llegará más lejos, pero para que nuestro marketing fuera regional debíamos estar preparados en tres escenarios, los que con el tiempo le llamamos las A de la regionalización.</p>
+
+  <p>Asertividad, porque las estrategias pueden aguantar el papel pero hay que ser asertivos al aplicarlas, agilidad porque el mundo actual post pandemia no nos daría mucho tiempo para accionar y adaptación porque debíamos trascender de la publicidad tradicional a la efectiva y certera.</p>
+    
+  <p>¿Para ustedes qué es importante también en el marketing regional Mooders?</p>
+  <p class="text-footer-dialog">MAKE THINGS HAPPEN, NO MATTER WHAT</p>
+</dialog>
+
+<dialog id="dialog3">
+  <button class="dialog-close-btn" data-dialog-id="dialog3">X</button>
+  <h2>El “nuevo” medio digital</h2>
+  <p>Desde el momento en que la inversión de medios tradicionales pasó a medios alternativos (digitales), fue entrando un protagonista desconocido para muchos, los influencers y creadores de contenido, hoy ellos deciden cómo su potencial alcance puede ayudar a una marca para ser más relevante.</p>
+
+  <p>Pero no todos están aún convencidos de su fortaleza y dudan del camino, aquí 5 tips para que la estrategia con influencers sea efectiva:</p>
+    
+  <p>No todo es seguidores <br>
+    No todo son celebrities <br>
+    Estudia al influencer más allá de lo que se ve en la red <br>
+    Confía en la data <br>
+    Mídelos.</p>
+  <p>¿Cuál es su influencer favorito Mooders?</p>
+  <p class="text-footer-dialog">MAKE THINGS HAPPEN, NO MATTER WHAT</p>
+</dialog>
+
+<dialog id="dialog4">
+  <button class="dialog-close-btn" data-dialog-id="dialog4">X</button>
+  <h2>Los algoritmos en lo orgánico</h2>
+  <p>¡No se preocupen, esta no es una entrada para desanimarse, todo lo contrario! Seguramente muchos content’s y Social Media Manager hemos visto cómo el contenido con más insight genera 8 likes y 200 de alcance, pero esto tiene su razón de ser: el algoritmo de FB e IG ha designado que contenido no pautado solo será visto en un 0.5% del total de comunidad. Seguro, much@s estarán diciendo ¿y ahora qué nos inventamos? Aquí unos consejos infalibles</p>
+
+  <p>Video con HashTag’s de gran alcance al subirlo <br>
+    Los gif’s ya son historia <br>
+    Copys de menos de 120 caracteres <br>
+    Memes con sentido <br>
+    Menciones a aliados</p>
+  <p>¿Qué tip recomiendan ustedes Mooders?</p>
+  <p class="text-footer-dialog">MAKE THINGS HAPPEN, NO MATTER WHAT</p>
+</dialog>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

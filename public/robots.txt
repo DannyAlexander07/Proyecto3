@@ -1,0 +1,8 @@
+# robots.txt — instrucciones para todos los crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /login
+Allow: /
+
+# ubicación del sitemap
+Sitemap: https://mood.pe/sitemap.xml

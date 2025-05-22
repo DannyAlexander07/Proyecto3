@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Compilar a ES6
+    "module": "commonjs",                     // Usar el módulo CommonJS
+    "outDir": "public/dist",                  // Los archivos JS compilados irán a public/dist/
+    "rootDir": "src/",                         // Los archivos fuente están en src/
+    "strict": true,                           // Habilitar comprobaciones estrictas
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["ES6", "DOM"]
+  },
+  "include": [
+    "src/main.ts",            // Incluir solo main.ts para compilación
+    "src/app.ts",                             // Incluir app.ts para compilación
+    "src/form_validation.ts"     
+  ],
+  "exclude": [
+    "node_modules",                          // Ignorar node_modules
+    "src/views",                              // No incluir views en la compilación
+    "src/controllers",                       // No incluir controllers
+    "src/routes",                            // No incluir routes
+    "src/utils"                              // No incluir utils
+  ]
+}

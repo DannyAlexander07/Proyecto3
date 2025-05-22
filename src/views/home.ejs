@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <meta name="description" content="<%= meta_description %>">
+  <!-- Open Graph (Facebook, LinkedIn, Pinterest, WhatsApp, …) -->
+  <meta property="og:title"         content="<%= title %>" />
+  <meta property="og:description"   content="<%= meta_description %>" />
+  <meta property="og:url"           content="<%= pageUrl %>" />
+  <meta property="og:type"          content="<%= pageType %>" />
+  <meta property="og:image"         content="<%= pageImage %>" />
+  <meta property="og:image:width"   content="<%= imageWidth %>" />
+  <meta property="og:image:height"  content="<%= imageHeight %>" />
+  <meta property="og:site_name"     content="<%= title_heading %>" />
+  <meta property="og:locale"        content="<%= locale %>" />
+  <!-- Facebook Insights / Insights admins -->
+  <!-- <meta property="fb:app_id"        content="<%= //fbAppId %>" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"         content="summary_large_image" />
+  <!-- <meta name="twitter:site"         content="@<%= //twitterHandle %>" /> -->
+  <!-- <meta name="twitter:creator"      content="@<%= //twitterCreator || twitterHandle %>" /> -->
+  <meta name="twitter:title"        content="<%= title %>" />
+  <meta name="twitter:description"  content="<%= meta_description %>" />
+  <meta name="twitter:image"        content="<%= pageImage %>" />
+
+  <!-- Opcional: para compatibilidad con algunos navegadores/redes -->
+  <link rel="image_src"             href="<%= pageImage %>" />
+  <link rel="canonical"             href="<%= pageUrl %>" />
+
+  <!-- Para videos -->
+  <meta property="og:video"       content="<%= pageVideo %>" />
+
+  <%- include('partials/header') %>
+
+  <h1 hidden><%= title_heading %></h1>
+  <!-- Hero con vídeo de fondo -->
+  <section id="hero">
+    <video autoplay muted loop playsinline disablepictureinpicture disableremoteplayback id="hero-video">
+      <source src="videos/video.mp4" type="video/mp4">
+    </video>
+    <div id="hero-overlay"></div>
+    <!-- <div class="hero-content text-center text-white">
+      <h1 class="display-1">Mood</h1>
+      <p class="lead">Descubre tu estado de ánimo</p>
+    </div> -->
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

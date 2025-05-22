@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <meta name="description" content="<%= meta_description %>">
+  <!-- Open Graph (Facebook, LinkedIn, Pinterest, WhatsApp, …) -->
+  <meta property="og:title"         content="<%= title %>" />
+  <meta property="og:description"   content="<%= meta_description %>" />
+  <meta property="og:url"           content="<%= pageUrl %>" />
+  <meta property="og:type"          content="<%= pageType %>" />
+  <meta property="og:image"         content="<%= pageImage %>" />
+  <meta property="og:image:width"   content="<%= imageWidth %>" />
+  <meta property="og:image:height"  content="<%= imageHeight %>" />
+  <meta property="og:site_name"     content="<%= title_heading %>" />
+  <meta property="og:locale"        content="<%= locale %>" />
+  <!-- Facebook Insights / Insights admins -->
+  <!-- <meta property="fb:app_id"        content="<%= //fbAppId %>" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"         content="summary_large_image" />
+  <!-- <meta name="twitter:site"         content="@<%= //twitterHandle %>" /> -->
+  <!-- <meta name="twitter:creator"      content="@<%= //twitterCreator || twitterHandle %>" /> -->
+  <meta name="twitter:title"        content="<%= title %>" />
+  <meta name="twitter:description"  content="<%= meta_description %>" />
+  <meta name="twitter:image"        content="<%= pageImage %>" />
+
+  <!-- Opcional: para compatibilidad con algunos navegadores/redes -->
+  <link rel="image_src"             href="<%= pageImage %>" />
+  <link rel="canonical"             href="<%= pageUrl %>" />
+
+  <%- include('partials/header') %>
+  
+  <h1 hidden><%= title_heading %></h1>
+  <div id="contacto" class="container">
+    <h1 class="text-center">Contáctanos</h1>
+    <form id="contactForm" action="https://formsubmit.co/eb9043c8f06660aaa6cd2664db83e65c " method="POST"  class="contact-form">
+      <input type="hidden" name="_next" value="http://localhost:3000/success">
+      <input type="hidden" name="_subject" value="[Mood] Formulario Contacto">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Envio del Formulario Mood completo">
+      <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Nombres*" required maxlength="50">
+        <div id="name-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <div class="form-group">
+        <input type="text" name="company" id="company" class="form-control" placeholder="Empresa*" required maxlength="50">
+        <div id="company-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Correo*" required maxlength="30">
+        <div id="email-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" id="phone" class="form-control" placeholder="Teléfono / Celular*" required maxlength="14" pattern="^\+?\d{9,15}$">
+        <div id="phone-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <div class="form-group">
+        <input type="text" name="country" id="country" class="form-control" placeholder="País*" required maxlength="15">
+        <div id="country-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <div class="form-group">
+        <textarea name="message" id="message" class="form-control" placeholder="Mensaje*" required></textarea>
+        <div id="message-error" class="error-message"></div> <!-- Mensaje de error -->
+      </div>
+      <!-- <div class="form-group">
+        <label for="captcha">Ingresa el siguiente texto:</label>
+        <div id="captcha-text"></div> 
+        <input type="text" name="captcha" id="captcha" class="form-control" placeholder="Ingresa los números" required>
+        <div id="captcha-error" class="error-message"></div>
+      </div> -->
+      <button class="send-animated-button" type="submit" >
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">Enviar</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+
+    </form>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
