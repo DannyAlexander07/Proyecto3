@@ -5,7 +5,7 @@ import { sendEmail } from '../utils/mailer';
 
 export default class PageController {
   // Renderizar la página principal (Home)
-  static home(req: Request, res: Response) {
+  static home(req: Request, res: Response) { 
     res.render('home', { title: 'Agencia Digital Creativa - MOOD', page: 'home', meta_description: 'Mood: La agencia de comunicación que revoluciona el marketing. Especialistas en ATL, Digital, PR y BTL, ofrecemos soluciones para potenciar tu marca.', title_heading: 'Agencia Digital Creativa', pageImage: 'images/Mood-thumbnail.webp', pageUrl: req.protocol + '://' + req.get('host') + req.originalUrl, pageType: 'video.mp4', locale: 'es_PE', imageWidth: '1200', imageHeight: '630', pageVideo: 'videos/video.mp4'});
   }
 
