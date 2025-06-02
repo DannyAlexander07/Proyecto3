@@ -45,10 +45,10 @@ mood-project/
 ├── postcss.config.js           # Configuración para PostCSS
 └── tsconfig.json               # Configuración de compilador TypeScript
 ```
-📌 Objetivo
+## 📌 Objetivo
 Desarrollar una plataforma web robusta para Mood, con una base sólida para crecimiento futuro, implementación de nuevas funciones y mantenimiento claro. Se priorizó la calidad del código, 
 estructura ordenada y buenas prácticas de desarrollo backend y frontend.
 
-👨‍💻 Autor
+## ✍️ Autor
 Danny Alexander
 GitHub: @DannyAlexander07
